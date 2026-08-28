@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="ext-resource-dependency" content="assets/prototype-video.mp4" data-resource-id="proto-video-src" />
+<meta name="ext-resource-dependency" content="assets/resume.pdf" data-resource-id="resume-pdf-src" />
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+  <link rel="stylesheet" href="_ds/modernist-b1528d07-a821-4b48-b3b9-bcdb44b70864/styles.css">
+  <script src="_ds/modernist-b1528d07-a821-4b48-b3b9-bcdb44b70864/_ds_bundle.js"></script>
+  <script src="./image-slot.js"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--color-bg); color: var(--color-text); }
+    a { color: var(--color-text); text-decoration: none; }
+    a:hover { color: var(--color-accent-700); }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+    .disabled-link { opacity: 0.4; cursor: default; pointer-events: none; }
+    .contact-row { transition: color .15s ease, padding-left .15s ease; }
+    .contact-row:hover { color: var(--color-accent-700); padding-left: 8px; }
+    .frame { transition: border-color .18s ease; }
+    .frame:hover { border-color: var(--color-accent); }
+    .cap { transition: border-color .18s ease; }
+    .cap:hover { border-left-color: var(--color-accent); }
+    .rulecol { transition: border-color .18s ease; }
+    .rulecol:hover { border-left-color: var(--color-accent); }
+    #proto-video::-webkit-media-controls-play-button,
+    #proto-video::-webkit-media-controls { display: flex !important; }
+    @media (max-width: 900px) {
+      .cols3 { grid-template-columns: 1fr !important; }
+      .sticky { position: static !important; }
+    }
+    @media (max-width: 860px) {
+      .split { grid-template-columns: 1fr !important; }
+      .navlinks { gap: 14px !important; font-size: 13px !important; }
+    }
+    @media (max-width: 560px) {
+      .navlinks a:nth-child(3) { display: none; }
+    }
+  </style>
+</helmet>
+
+<template id="__bundler_thumbnail" data-bg-color="#f3f2f2">
+  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <rect width="200" height="200" fill="#f3f2f2"></rect>
+    <text x="40" y="120" font-family="Archivo, sans-serif" font-size="52" font-weight="700" fill="#ec3013">AK</text>
+  </svg>
+</template>
+
+<div style="background: var(--color-bg);">
+
+<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+<div data-screen-label="Home">
+
+  <nav class="nav" style="position: sticky; top: 0; z-index: 10; background: var(--color-bg); justify-content: space-between; max-width: 1160px; margin: 0 auto; padding: var(--space-3) var(--space-4); width: auto;">
+    <span class="nav-brand" style="letter-spacing: 0.03em; font-size: 14px;">ARAVIND KUMAR S</span>
+    <div class="navlinks" style="display: flex; gap: var(--space-4); font-family: var(--font-body); font-size: 14px;">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="split" style="max-width: 1160px; margin: 0 auto; padding: var(--space-8) var(--space-4) var(--space-6); display: grid; grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr); gap: var(--space-6); align-items: center;">
+    <div>
+      <div style="font-family: var(--font-body); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-700); margin-bottom: var(--space-4);">UI/UX Designer · AI-Driven UI Engineer</div>
+      <h1 style="font-family: var(--font-heading); font-size: clamp(38px, 4.4vw, 60px); line-height: 1.05; letter-spacing: -0.01em; margin: 0 0 var(--space-4); text-wrap: pretty;">Aravind Kumar S</h1>
+      <p style="font-family: var(--font-body); font-size: 17px; line-height: 1.6; max-width: 44ch; margin: 0 0 var(--space-6); color: var(--color-text); opacity: 0.85;">I design intuitive, production-focused interfaces for complex industrial systems, bridging user needs, machine workflows, and engineering constraints.</p>
+      <div style="display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap;">
+        <a href="#work" class="btn btn-primary">View My Work<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+        <a href="https://www.linkedin.com/in/aravind-uiux-designer" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; flex-wrap: nowrap; white-space: nowrap; gap: 6px; font-family: var(--font-body); font-size: 14px; opacity: 0.75;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg><span style="line-height: 1;">LinkedIn</span>
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="frame" style="width: 100%; border: 2px solid var(--color-divider); background: var(--color-surface);">
+        <img src="assets/program-explorer.svg" alt="G-Tron Configurator — Program Explorer" style="width: 100%; height: auto; object-fit: contain; display: block;">
+      </div>
+      <div style="display: flex; justify-content: space-between; margin-top: var(--space-3); padding-top: var(--space-2); border-top: 1px solid var(--color-divider); font-family: var(--font-body); font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase; opacity: 0.55;">
+        <span>Featured Project</span>
+        <span>G-Tron Configurator</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="hr" style="max-width: 1160px; margin: 0 auto;"></div>
+
+  <section id="work" style="max-width: 1160px; margin: 0 auto; padding: var(--space-8) var(--space-4);">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: var(--space-6);">
+      <div style="display: flex; align-items: baseline; gap: var(--space-4);">
+        <h2 style="font-family: var(--font-heading); font-size: clamp(28px, 3.2vw, 38px); margin: 0;">Selected Work</h2>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: var(--space-6); margin-bottom: var(--space-6);">
+      <figure style="margin: 0;">
+        <div style="width: 100%; border: 2px solid var(--color-divider); background: var(--color-surface); padding: var(--space-3);">
+          <img src="assets/tool-kit.svg" alt="G-Tron Configurator — Tool Kit" loading="lazy" decoding="async" style="width: 100%; height: auto; object-fit: contain; display: block;">
+        </div>
+        <figcaption style="display: flex; justify-content: space-between; align-items: baseline; margin-top: var(--space-2); padding-top: var(--space-2); border-top: 1px solid var(--color-divider); font-family: var(--font-body); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;">
+          <span>Tool Kit</span>
+          <span style="color: var(--color-accent-700);">01</span>
+        </figcaption>
+      </figure>
+      <div class="split" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); align-items: start;">
+        <figure style="margin: 0;">
+          <div style="width: 100%; border: 2px solid var(--color-divider); background: var(--color-surface); padding: var(--space-3);">
+            <img src="assets/part-setup.svg" alt="G-Tron Configurator — Part Setup" loading="lazy" decoding="async" style="width: 100%; height: auto; object-fit: contain; display: block;">
+          </div>
+          <figcaption style="display: flex; justify-content: space-between; align-items: baseline; margin-top: var(--space-2); padding-top: var(--space-2); border-top: 1px solid var(--color-divider); font-family: var(--font-body); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;">
+            <span>Part Setup</span>
+            <span style="color: var(--color-accent-700);">02</span>
+          </figcaption>
+        </figure>
+        <figure style="margin: 0;">
+          <div style="width: 100%; border: 2px solid var(--color-divider); background: var(--color-surface); padding: var(--space-3);">
+            <img src="assets/view-setup.svg" alt="G-Tron Configurator — View Setup" loading="lazy" decoding="async" style="width: 100%; height: auto; object-fit: contain; display: block;">
+          </div>
+          <figcaption style="display: flex; justify-content: space-between; align-items: baseline; margin-top: var(--space-2); padding-top: var(--space-2); border-top: 1px solid var(--color-divider); font-family: var(--font-body); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;">
+            <span>View Setup</span>
+            <span style="color: var(--color-accent-700);">03</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="split" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6);">
+      <div>
+        <h3 style="font-family: var(--font-heading); font-size: clamp(24px, 2.6vw, 32px); margin: 0 0 var(--space-3); line-height: 1.15;">G-Tron Configurator</h3>
+        <span class="tag tag-outline">Industrial Vision System</span>
+      </div>
+      <div>
+        <p style="font-family: var(--font-body); font-size: 16px; line-height: 1.6; max-width: 46ch; margin: 0 0 var(--space-4); opacity: 0.85;">Designing a clear and scalable configuration experience for an industrial vision system.</p>
+        <a href="#" onClick="{{ goCaseStudy }}" class="btn btn-primary" style="width: fit-content;">View Case Study →</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="hr" style="max-width: 1160px; margin: 0 auto;"></div>
+
+  <section id="about" class="split" style="max-width: 1160px; margin: 0 auto; padding: var(--space-8) var(--space-4); display: grid; grid-template-columns: minmax(200px, 1fr) minmax(0, 2.2fr); gap: var(--space-8);">
+    <div style="display: flex; align-items: baseline; gap: var(--space-4);">
+      <h2 style="font-family: var(--font-heading); font-size: clamp(28px, 3.2vw, 38px); margin: 0;">About</h2>
+    </div>
+    <div>
+      <p style="font-family: var(--font-body); font-size: 17px; line-height: 1.65; max-width: 62ch; margin: 0; opacity: 0.85;">I'm a UI/UX Designer with 4+ years of experience across field applications, automation, and product UI/UX for industrial vision systems. My experience working directly with machines and production environments has shaped how I approach design — balancing usability, accuracy, and engineering constraints. I also explore AI-assisted design-to-code workflows to bridge design and development.</p>
+    </div>
+  </section>
+
+  <div class="hr" style="max-width: 1160px; margin: 0 auto;"></div>
+
+  <section id="capabilities" style="max-width: 1160px; margin: 0 auto; padding: var(--space-8) var(--space-4);">
+    <div style="display: flex; align-items: baseline; gap: var(--space-4); margin-bottom: var(--space-6);">
+      <h2 style="font-family: var(--font-heading); font-size: clamp(28px, 3.2vw, 38px); margin: 0;">Capabilities</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-6);">
+      <div class="cap" style="border-left: 2px solid var(--color-divider); padding-left: var(--space-4);">
+        <h3 style="font-family: var(--font-heading); font-size: 20px; margin: 0 0 var(--space-4);">UI/UX Design</h3>
+        <div style="display: flex; flex-direction: column; gap: var(--space-2); font-family: var(--font-body); font-size: 15px; line-height: 1.7; opacity: 0.8;">
+          <span>User flows</span><span>Wireframing</span><span>High-fidelity UI</span><span>Prototyping</span><span>Design Systems</span>
+        </div>
+      </div>
+      <div class="cap" style="border-left: 2px solid var(--color-divider); padding-left: var(--space-4);">
+        <h3 style="font-family: var(--font-heading); font-size: 20px; margin: 0 0 var(--space-4);">Industrial Product Design</h3>
+        <div style="display: flex; flex-direction: column; gap: var(--space-2); font-family: var(--font-body); font-size: 15px; line-height: 1.7; opacity: 0.8;">
+          <span>Inspection workflows</span><span>Operator interfaces</span><span>Data-heavy UI</span><span>Configuration systems</span>
+        </div>
+      </div>
+      <div class="cap" style="border-left: 2px solid var(--color-divider); padding-left: var(--space-4);">
+        <h3 style="font-family: var(--font-heading); font-size: 20px; margin: 0 0 var(--space-4);">Design Engineering</h3>
+        <div style="display: flex; flex-direction: column; gap: var(--space-2); font-family: var(--font-body); font-size: 15px; line-height: 1.7; opacity: 0.8;">
+          <span>AI-assisted UI</span><span>Design-to-code</span><span>HTML</span><span>React / TypeScript</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="hr" style="max-width: 1160px; margin: 0 auto;"></div>
+
+  <section id="contact" class="split" style="max-width: 1160px; margin: 0 auto; padding: var(--space-8) var(--space-4); display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8);">
+    <div>
+      <div style="display: flex; align-items: baseline; gap: var(--space-4); margin-bottom: var(--space-4);">
+        <span style="font-family: var(--font-body); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.5;">Contact</span>
+      </div>
+      <h2 style="font-family: var(--font-heading); font-size: clamp(28px, 3.6vw, 44px); margin: 0; max-width: 18ch; line-height: 1.1;">Let's build something useful.</h2>
+    </div>
+    <div style="display: flex; flex-direction: column; align-self: end;">
+      <a href="mailto:aravindkumarak1302@gmail.com" class="contact-row" style="display: flex; justify-content: space-between; gap: var(--space-4); padding: var(--space-4) 0; border-top: 2px solid var(--color-divider); font-family: var(--font-body); font-size: 16px;">
+        <span>Email</span><span style="opacity: 0.6; overflow-wrap: anywhere;">aravindkumarak1302@gmail.com</span>
+      </a>
+      <a href="https://www.linkedin.com/in/aravind-uiux-designer" target="_blank" rel="noopener noreferrer" class="contact-row" style="display: flex; justify-content: space-between; gap: var(--space-4); padding: var(--space-4) 0; border-top: 1px solid var(--color-divider); border-bottom: 1px solid var(--color-divider); font-family: var(--font-body); font-size: 16px;">
+        <span>LinkedIn</span><span style="opacity: 0.6;">↗</span>
+      </a>
+      </sc-if>
+    </div>
+  </section>
+
+  <footer style="max-width: 1160px; margin: 0 auto; padding: var(--space-4); display: flex; justify-content: space-between; flex-wrap: wrap; gap: var(--space-2); font-family: var(--font-body); font-size: 13px; opacity: 0.55; border-top: 2px solid var(--color-divider);">
+    <span>Aravind Kumar S — UI/UX Designer</span>
+    <span>© 2026</span>
+  </footer>
+
+</div>
+</sc-if>
+
+<sc-if value="{{ isCase }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="G-Tron Case Study">
+
+  <nav class="nav" style="position: sticky; top: 0; z-index: 10; background: var(--color-bg); justify-content: space-between; max-width: 1160px; margin: 0 auto; padding: var(--space-3) var(--space-4); width: auto;">
+    <a href="#" onClick="{{ goHome }}" class="nav-brand" style="letter-spacing: 0.03em; font-size: 14px; flex-shrink: 0;">ARAVIND KUMAR S</a>
+    <div style="display: flex; align-items: center; gap: var(--space-3); min-width: 0;">
+      <div style="display: flex; gap: var(--space-4); font-family: var(--font-body); font-size: 14px; overflow-x: auto; white-space: nowrap; scrollbar-width: none;">
+        <a href="#context">Context</a>
+        <a href="#decisions">Decisions</a>
+        <a href="{{ prototypeButtonHref }}">{{ prototypeButtonLabel }}</a>
+        <a href="#final">Final UI</a>
+      </div>
+      <a href="#" onClick="{{ goHome }}" style="flex-shrink: 0; font-family: var(--font-body); font-size: 14px; border: 2px solid var(--color-divider); padding: 6px 12px; white-space: nowrap;">← Back</a>
+    </div>
+  </nav>
+
+  <header style="max-width: 1160px; margin: 0 auto; padding: var(--space-8) var(--space-4) var(--space-6);">
+    <div style="font-family: var(--font-body); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-700); margin-bottom: var(--space-4);">Case Study — Industrial Vision System</div>
+    <h1 style="font-family: var(--font-heading); font-size: clamp(40px, 5.4vw, 76px); line-height: 1.02; letter-spacing: -0.015em; margin: 0 0 var(--space-4); max-width: 22ch;">G-Tron Configurator</h1>
+    <p style="font-family: var(--font-body); font-size: clamp(18px, 2vw, 22px); line-height: 1.5; max-width: 54ch; margin: 0 0 var(--space-6); opacity: 0.85; text-wrap: pretty;">Turning an expert-only machine setup process into a guided, self-service configuration experience.</p>
+    <div class="cols3" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); border-top: 2px solid var(--color-divider); padding-top: var(--space-4);">
+      <div>
+        <div style="font-family: var(--font-body); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.5; margin-bottom: 6px;">Role</div>
+        <div style="font-family: var(--font-body); font-size: 15px;">UI/UX Designer</div>
+      </div>
+      <div>
+        <div style="font-family: var(--font-body); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.5; margin-bottom: 6px;">Domain</div>
+        <div style="font-family: var(--font-body); font-size: 15px;">Stamping &amp; terminal inspection</div>
+      </div>
+      <div>
+        <div style="font-family: var(--font-body); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.5; margin-bottom: 6px;">Target device</div>
+        <div style="font-family: var(--font-body); font-size: 15px;">18.5" industrial touchscreen</div>
+      </div>
+      <div>
+        <div style="font-family: var(--font-body); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.5; margin-bottom: 6px;">Status</div>
+        <div style="font-family: var(--font-body); font-size: 15px;">High-fidelity prototype</div>
+      </div>
+    </div>
+  </header>
+
+  <section style="max-width: 1160px; margin: 0 auto; padding: 0 var(--space-4) var(--space-8);">
+    <div class="frame" style="border: 2px solid var(--color-divider); background: var(--color-surface); padding: var(--space-3);">
+      <img src="assets/program-explorer.svg" alt="G-Tron Configurator — Program Explorer screen" style="width: 100%; height: auto; object-fit: contain; display: block;">
+    </div>
+    <div style="display: flex; justify-content: space-between; margin-top: var(--space-2); padding-top: var(--space-2); border-top: 1px solid var(--color-divider); font-family: var(--font-body); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.55;">
+      <span>Program Explorer</span>
+      <span>G-Tron Configurator</span>
+    </div>
+  </section>
+
+  <div class="hr" style="max-width: 1160px; margin: 0 auto;"></div>
+
+  <section id="context" class="split" style="max-width: 1160px; margin: 0 auto; padding: var(--space-8) var(--space-4); display: grid; grid-template-columns: minmax(200px, 1fr) minmax(0, 2.2fr); gap: var(--space-8);">
+    <div class="sticky" style="position: sticky; top: 80px; align-self: start; display: flex; align-items: baseline; gap: var(--space-4);">
+      <h2 style="font-family: var(--font-heading); font-size: clamp(26px, 3vw, 36px); margin: 0;">The machine</h2>
+    </div>
+    <div>
+      <p style="font-family: var(--font-body); font-size: 18px; line-height: 1.65; max-width: 62ch; margin: 0 0 var(--space-4);">G-Tron is a vision-based automated quality inspection machine used in industrial manufacturing, specifically in the stamping and terminal industry. It inspects terminal parts using a three-camera vision system, telecentric lenses, lighting systems, motorized guide and reeler mechanisms, and hole-triggered image capture.</p>
+      <p style="font-family: var(--font-body); font-size: 18px; line-height: 1.65; max-width: 62ch; margin: 0 0 var(--space-6); opacity: 0.85;">The software measures parts and makes automated PASS / FAIL decisions against configurable tolerance limits. The Configurator is the setup module used to create a part program — the recipe — before inspection can run.</p>
+      <div style="font-family: var(--font-body); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.5; margin-bottom: var(--space-3);">What a part program defines</div>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+        <span class="tag tag-outline">Program details</span>
+        <span class="tag tag-outline">Required cameras</span>
+        <span class="tag tag-outline">Guide width</span>
+        <span class="tag tag-outline">Motor position</span>
+        <span class="tag tag-outline">Motorized guide</span>
+        <span class="tag tag-outline">Arrestors</span>
+        <span class="tag tag-outline">Reeler motor</span>
+        <span class="tag tag-outline">Camera focus</span>
+        <span class="tag tag-outline">Lighting</span>
+        <span class="tag tag-outline">Exposure / gain</span>
+        <span class="tag tag-outline">Image quality threshold</span>
+        <span class="tag tag-outline">PPM</span>
+        <span class="tag tag-outline">Fail limit</span>
+        <span class="tag tag-outline">Trigger mode</span>
+        <span class="tag tag-outline">Step pitch</span>
+        <span class="tag tag-outline">Units</span>
+        <span class="tag tag-outline">Master image</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="hr" style="max-width: 1160px; margin: 0 auto;"></div>
+
+  <section class="split" style="max-width: 1160px; margin: 0 auto; padding: var(--space-8) var(--space-4); display: grid; grid-template-columns: minmax(200px, 1fr) minmax(0, 2.2fr); gap: var(--space-8);">
+    <div class="sticky" style="position: sticky; top: 80px; align-self: start; display: flex; align-items: baseline; gap: var(--space-4);">
+      <h2 style="font-family: var(--font-heading); font-size: clamp(26px, 3vw, 36px); margin: 0;">The problem</h2>
+    </div>
+    <div>
+      <p style="font-family: var(--font-heading); font-size: clamp(24px, 2.8vw, 34px); line-height: 1.25; max-width: 30ch; margin: 0 0 var(--space-6); color: var(--color-accent-700);">Setup was expensive, slow, expert-only, and unscalable.</p>
+      <p style="font-family: var(--font-body); font-size: 18px; line-height: 1.65; max-width: 62ch; margin: 0 0 var(--space-6);">There was no customer-facing UI for configuration. New part setup was performed by manually editing JSON files and entering ROI values.</p>
+      <div style="display: grid; grid-template-columns: 1fr; gap: 0;">
+        <div style="display: grid; grid-template-columns: 56px minmax(0, 1fr) minmax(0, 1.4fr); gap: var(--space-4); align-items: baseline; padding: var(--space-4) 0; border-top: 2px solid var(--color-divider); font-family: var(--font-body);">
+          <span style="font-size: 13px; letter-spacing: 0.08em; color: var(--color-accent-700);">01</span>
+          <span style="font-size: 17px; font-weight: 600;">Expert dependency</span>
+          <span style="font-size: 16px; line-height: 1.55; opacity: 0.8;">Only the internal application team could configure new parts.</span>
+        </div>
+        <div style="display: grid; grid-template-columns: 56px minmax(0, 1fr) minmax(0, 1.4fr); gap: var(--space-4); align-items: baseline; padding: var(--space-4) 0; border-top: 1px solid var(--color-divider); font-family: var(--font-body);">
+          <span style="font-size: 13px; letter-spacing: 0.08em; color: var(--color-accent-700);">02</span>
+          <span style="font-size: 17px; font-weight: 600;">Slow and costly setup</span>
+          <span style="font-size: 16px; line-height: 1.55; opacity: 0.8;">New parts required engineering support, travel, and application-team involvement.</span>
+        </div>
+        <div style="display: grid; grid-template-columns: 56px minmax(0, 1fr) minmax(0, 1.4fr); gap: var(--space-4); align-items: baseline; padding: var(--space-4) 0; border-top: 1px solid var(--color-divider); font-family: var(--font-body);">
+          <span style="font-size: 13px; letter-spacing: 0.08em; color: var(--color-accent-700);">03</span>
+          <span style="font-size: 17px; font-weight: 600;">Error-prone configuration</span>
+          <span style="font-size: 16px; line-height: 1.55; opacity: 0.8;">Incorrect values could cause configuration problems.</span>
+        </div>
+        <div style="display: grid; grid-template-columns: 56px minmax(0, 1fr) minmax(0, 1.4fr); gap: var(--space-4); align-items: baseline; padding: var(--space-4) 0; border-top: 1px solid var(--color-divider); font-family: var(--font-body);">
+          <span style="font-size: 13px; letter-spacing: 0.08em; color: var(--color-accent-700);">04</span>
+          <span style="font-size: 17px; font-weight: 600;">No validation or safety checks</span>
+          <span style="font-size: 16px; line-height: 1.55; opacity: 0.8;">Incorrect values could reach the machine.</span>
+        </div>
+        <div style="display: grid; grid-template-columns: 56px minmax(0, 1fr) minmax(0, 1.4fr); gap: var(--space-4); align-items: baseline; padding: var(--space-4) 0; border-top: 1px solid var(--color-divider); font-family: var(--font-body);">
+          <span style="font-size: 13px; letter-spacing: 0.08em; color: var(--color-accent-700);">05</span>
+          <span style="font-size: 17px; font-weight: 600;">Knowledge dependency</span>
+          <span style="font-size: 16px; line-height: 1.55; opacity: 0.8;">Expert knowledge was locked inside code and within a small number of experienced people.</span>
+        </div>
+        <div style="display: grid; grid-template-columns: 56px minmax(0, 1fr) minmax(0, 1.4fr); gap: var(--space-4); align-items: baseline; padding: var(--space-4) 0; border-top: 1px solid var(--color-divider); border-bottom: 2px solid var(--color-divider); font-family: var(--font-body);">
+          <span style="font-size: 13px; letter-spacing: 0.08em; color: var(--color-accent-700);">06</span>
+          <span style="font-size: 17px; font-weight: 600;">Scalability bottleneck</span>
+          <span style="font-size: 16px; line-height: 1.55; opacity: 0.8;">The process became a bottleneck across 100+ customers.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="hr" style="max-width: 1160px; margin: 0 auto;"></div>
+
+  <section class="split" style="max-width: 1160px; margin: 0 auto; padding: var(--space-8) var(--space-4); display: grid; grid-template-columns: minmax(200px, 1fr) minmax(0, 2.2fr); gap: var(--space-8);">
+    <div class="sticky" style="position: sticky; top: 80px; align-self: start; display: flex; align-items: baseline; gap: var(--space-4);">
+      <h2 style="font-family: var(--font-heading); font-size: clamp(26px, 3vw, 36px); margin: 0;">Where the understanding came from</h2>
+    </div>
+    <div>
+      <p style="font-family: var(--font-body); font-size: 18px; line-height: 1.65; max-width: 62ch; margin: 0 0 var(--space-4);">Before moving into UI/UX, I worked as a Field Application Engineer — machine installation, customer demonstrations, troubleshooting, software testing, and working with inspection systems in real production environments.</p>
+      <p style="font-family: var(--font-body); font-size: 18px; line-height: 1.65; max-width: 62ch; margin: 0 0 var(--space-6); opacity: 0.85;">That field experience is not formal user research. What it gave me is first-hand understanding of both sides of this product: the customer and operator perspective, and the application-engineer perspective.</p>
+      <div class="cols3" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6);">
+        <div class="rulecol" style="border-left: 2px solid var(--color-divider); padding-left: var(--space-4);">
+          <h3 style="font-family: var(--font-heading); font-size: 18px; margin: 0 0 var(--space-3);">Customer / operator side</h3>
+          <div style="display: flex; flex-direction: column; gap: 8px; font-family: var(--font-body); font-size: 16px; line-height: 1.5; opacity: 0.85;">
+            <span>Operator workflows on the floor</span>
+            <span>Production constraints</span>
+            <span>Practical difficulties with inspection systems</span>
+          </div>
+        </div>
+        <div class="rulecol" style="border-left: 2px solid var(--color-divider); padding-left: var(--space-4);">
+          <h3 style="font-family: var(--font-heading); font-size: 18px; margin: 0 0 var(--space-3);">Application-engineer side</h3>
+          <div style="display: flex; flex-direction: column; gap: 8px; font-family: var(--font-body); font-size: 16px; line-height: 1.5; opacity: 0.85;">
+            <span>Machine configuration challenges</span>
+            <span>The impact of incorrect configuration</span>
+            <span>What the setup actually demands</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="hr" style="max-width: 1160px; margin: 0 auto;"></div>
+
+  <section class="split" style="max-width: 1160px; margin: 0 auto; padding: var(--space-8) var(--space-4); display: grid; grid-template-columns: minmax(200px, 1fr) minmax(0, 2.2fr); gap: var(--space-8);">
+    <div class="sticky" style="position: sticky; top: 80px; align-self: start; display: flex; align-items: baseline; gap: var(--space-4);">
+      <h2 style="font-family: var(--font-heading); font-size: clamp(26px, 3vw, 36px); margin: 0;">Challenge &amp; goals</h2>
+    </div>
+    <div>
+      <p style="font-family: var(--font-body); font-size: 20px; line-height: 1.55; max-width: 56ch; margin: 0 0 var(--space-6);">Transform a code-dependent, expert-only configuration process into a guided self-service experience that customers can operate directly — while respecting machine, safety, and touchscreen constraints.</p>
+      <div style="display: flex; flex-direction: column;">
+        <div style="display: grid; grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.6fr); gap: var(--space-4); padding: var(--space-4) 0; border-top: 2px solid var(--color-divider); font-family: var(--font-body);">
+          <span style="font-family: var(--font-heading); font-size: 20px;">Self-service</span>
+          <span style="font-size: 16px; line-height: 1.55; opacity: 0.85;">Customers create and configure a part program without depending on the internal application team.</span>
+        </div>
+        <div style="display: grid; grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.6fr); gap: var(--space-4); padding: var(--space-4) 0; border-top: 1px solid var(--color-divider); font-family: var(--font-body);">
+          <span style="font-family: var(--font-heading); font-size: 20px;">Guided</span>
+          <span style="font-size: 16px; line-height: 1.55; opacity: 0.85;">Configuration knowledge translated into understandable visual controls and workflows.</span>
+        </div>
+        <div style="display: grid; grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.6fr); gap: var(--space-4); padding: var(--space-4) 0; border-top: 1px solid var(--color-divider); font-family: var(--font-body);">
+          <span style="font-family: var(--font-heading); font-size: 20px;">Safe</span>
+          <span style="font-size: 16px; line-height: 1.55; opacity: 0.85;">The interface prevents invalid or unsafe machine values wherever possible.</span>
+        </div>
+        <div style="display: grid; grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.6fr); gap: var(--space-4); padding: var(--space-4) 0; border-top: 1px solid var(--color-divider); font-family: var(--font-body);">
+          <span style="font-family: var(--font-heading); font-size: 20px;">Touch-friendly</span>
+          <span style="font-size: 16px; line-height: 1.55; opacity: 0.85;">Comfortable to work on an 18.5-inch industrial touchscreen.</span>
+        </div>
+        <div style="display: grid; grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.6fr); gap: var(--space-4); padding: var(--space-4) 0; border-top: 1px solid var(--color-divider); border-bottom: 2px solid var(--color-divider); font-family: var(--font-body);">
+          <span style="font-family: var(--font-heading); font-size: 20px;">Scalable</span>
+          <span style="font-size: 16px; line-height: 1.55; opacity: 0.85;">One interaction model that supports different parts, camera requirements, and configuration needs.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="hr" style="max-width: 1160px; margin: 0 auto;"></div>
+
+  <section style="max-width: 1160px; margin: 0 auto; padding: var(--space-8) var(--space-4);">
+    <div style="display: flex; align-items: baseline; gap: var(--space-4); margin-bottom: var(--space-6);">
+      <h2 style="font-family: var(--font-heading); font-size: clamp(26px, 3vw, 36px); margin: 0;">Approach</h2>
+    </div>
+    <div class="cols3" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-6); margin-bottom: var(--space-8);">
+      <div class="rulecol" style="border-left: 2px solid var(--color-divider); padding-left: var(--space-4);">
+        <div style="font-family: var(--font-body); font-size: 13px; letter-spacing: 0.1em; color: var(--color-accent-700); margin-bottom: var(--space-3);">01</div>
+        <h3 style="font-family: var(--font-heading); font-size: 19px; margin: 0 0 var(--space-3); line-height: 1.25;">User flow &amp; information architecture</h3>
+        <p style="font-family: var(--font-body); font-size: 15px; line-height: 1.6; margin: 0; opacity: 0.85;">Mapped the complete configurator flow in FigJam and a Coggle mindmap — decisions, dependencies, and validations.</p>
+      </div>
+      <div class="rulecol" style="border-left: 2px solid var(--color-divider); padding-left: var(--space-4);">
+        <div style="font-family: var(--font-body); font-size: 13px; letter-spacing: 0.1em; color: var(--color-accent-700); margin-bottom: var(--space-3);">02</div>
+        <h3 style="font-family: var(--font-heading); font-size: 19px; margin: 0 0 var(--space-3); line-height: 1.25;">Screen inventory &amp; specifications</h3>
+        <p style="font-family: var(--font-body); font-size: 15px; line-height: 1.6; margin: 0; opacity: 0.85;">Defined the required screens and their responsibilities before moving into detailed visual design.</p>
+      </div>
+      <div class="rulecol" style="border-left: 2px solid var(--color-divider); padding-left: var(--space-4);">
+        <div style="font-family: var(--font-body); font-size: 13px; letter-spacing: 0.1em; color: var(--color-accent-700); margin-bottom: var(--space-3);">03</div>
+        <h3 style="font-family: var(--font-heading); font-size: 19px; margin: 0 0 var(--space-3); line-height: 1.25;">Layout definition</h3>
+        <p style="font-family: var(--font-body); font-size: 15px; line-height: 1.6; margin: 0; opacity: 0.85;">Explored the configuration structure and consolidated the multi-step concept into a single workstation layout.</p>
+      </div>
+      <div class="rulecol" style="border-left: 2px solid var(--color-divider); padding-left: var(--space-4);">
+        <div style="font-family: var(--font-body); font-size: 13px; letter-spacing: 0.1em; color: var(--color-accent-700); margin-bottom: var(--space-3);">04</div>
+        <h3 style="font-family: var(--font-heading); font-size: 19px; margin: 0 0 var(--space-3); line-height: 1.25;">High-fidelity interactive prototype</h3>
+        <p style="font-family: var(--font-body); font-size: 15px; line-height: 1.6; margin: 0; opacity: 0.85;">Built a functional high-fidelity SPA prototype with synchronized state and a live camera viewport.</p>
+      </div>
+      <div class="rulecol" style="border-left: 2px solid var(--color-divider); padding-left: var(--space-4);">
+        <div style="font-family: var(--font-body); font-size: 13px; letter-spacing: 0.1em; color: var(--color-accent-700); margin-bottom: var(--space-3);">05</div>
+        <h3 style="font-family: var(--font-heading); font-size: 19px; margin: 0 0 var(--space-3); line-height: 1.25;">Design review &amp; feedback</h3>
+        <p style="font-family: var(--font-body); font-size: 15px; line-height: 1.6; margin: 0; opacity: 0.85;">Shared the mock UI with the internal application team to evaluate ease of use, configuration logic, and technical practicality. Their feedback refined the interface and workflow.</p>
+      </div>
+    </div>
+    <div style="border-top: 2px solid var(--color-divider); padding-top: var(--space-4);">
+      <div style="font-family: var(--font-body); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.5; margin-bottom: var(--space-4);">Review loop</div>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); font-family: var(--font-body); font-size: 16px;">
+        <span style="border: 2px solid var(--color-divider); padding: 10px var(--space-3);">Design</span>
+        <span style="color: var(--color-accent-700);">→</span>
+        <span style="border: 2px solid var(--color-divider); padding: 10px var(--space-3);">Internal application team review</span>
+        <span style="color: var(--color-accent-700);">→</span>
+        <span style="border: 2px solid var(--color-divider); padding: 10px var(--space-3);">Feedback</span>
+        <span style="color: var(--color-accent-700);">→</span>
+        <span style="border: 2px solid var(--color-divider); padding: 10px var(--space-3);">Refinement</span>
+        <span style="color: var(--color-accent-700);">→</span>
+        <span style="border: 2px solid var(--color-accent); color: var(--color-accent-700); padding: 10px var(--space-3); font-weight: 600;">Implementation-ready design</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="hr" style="max-width: 1160px; margin: 0 auto;"></div>
+
+  <section id="decisions" style="max-width: 1160px; margin: 0 auto; padding: var(--space-8) var(--space-4) var(--space-6);">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: var(--space-6);">
+      <div style="display: flex; align-items: baseline; gap: var(--space-4);">
+        <h2 style="font-family: var(--font-heading); font-size: clamp(26px, 3vw, 36px); margin: 0;">Key design decisions</h2>
+      </div>
+      <span style="font-family: var(--font-body); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.5;">Ten</span>
+    </div>
+  </section>
+
+  <section class="split" style="max-width: 1160px; margin: 0 auto; padding: 0 var(--space-4) var(--space-8); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: var(--space-8); align-items: center;">
+    <div>
+      <div style="font-family: var(--font-body); font-size: 13px; letter-spacing: 0.1em; color: var(--color-accent-700); margin-bottom: var(--space-3);">01</div>
+      <h3 style="font-family: var(--font-heading); font-size: clamp(24px, 2.6vw, 32px); margin: 0 0 var(--space-4); line-height: 1.2;">Replace JSON editing with visual controls</h3>
+      <p style="font-family: var(--font-body); font-size: 17px; line-height: 1.6; max-width: 46ch; margin: 0;">The previous process required code-level configuration. The new experience translates configuration tasks into visual controls, so customers never edit JSON or need to understand the underlying implementation.</p>
+    </div>
+    <div class="frame" style="border: 2px solid var(--color-divider); background: var(--color-surface); padding: var(--space-3);">
+      <img src="assets/view-setup.svg" alt="View Setup — visual controls replacing JSON configuration" loading="lazy" decoding="async" style="width: 100%; height: auto; object-fit: contain; display: block;">
+    </div>
+  </section>
+
+  <section class="split" style="max-width: 1160px; margin: 0 auto; padding: 0 var(--space-4) var(--space-8); display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: var(--space-8); align-items: center;">
+    <div class="frame" style="border: 2px solid var(--color-divider); background: var(--color-surface); padding: var(--space-3);">
+      <img src="assets/part-setup.svg" alt="Part Setup — single workstation layout" loading="lazy" decoding="async" style="width: 100%; height: auto; object-fit: contain; display: block;">
+    </div>
+    <div>
+      <div style="font-family: var(--font-body); font-size: 13px; letter-spacing: 0.1em; color: var(--color-accent-700); margin-bottom: var(--space-3);">02</div>
+      <h3 style="font-family: var(--font-heading); font-size: clamp(24px, 2.6vw, 32px); margin: 0 0 var(--space-4); line-height: 1.2;">One workstation, not a long multi-step flow</h3>
+      <p style="font-family: var(--font-body); font-size: 17px; line-height: 1.6; max-width: 46ch; margin: 0;">Configuration was consolidated into a single workstation layout: the camera viewport stays visible while the controls stay accessible. The intent was to reduce unnecessary navigation and keep the configuration context on screen.</p>
+    </div>
+  </section>
+
+  <section style="max-width: 1160px; margin: 0 auto; padding: 0 var(--space-4) var(--space-8);">
+    <div class="cols3" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-6);">
+      <div class="rulecol" style="border-left: 2px solid var(--color-divider); padding-left: var(--space-4);">
+        <div style="font-family: var(--font-body); font-size: 13px; letter-spacing: 0.1em; color: var(--color-accent-700); margin-bottom: var(--space-3);">03</div>
+        <h3 style="font-family: var(--font-heading); font-size: 21px; margin: 0 0 var(--space-3); line-height: 1.25;">Group motion controls</h3>
+        <p style="font-family: var(--font-body); font-size: 16px; line-height: 1.6; margin: 0; opacity: 0.85;">Guide, arrestor, and reeler controls sit together because they all relate to the physical movement and positioning of the part.</p>
+      </div>
+      <div class="rulecol" style="border-left: 2px solid var(--color-accent); padding-left: var(--space-4);">
+        <div style="font-family: var(--font-body); font-size: 13px; letter-spacing: 0.1em; color: var(--color-accent-700); margin-bottom: var(--space-3);">04</div>
+        <h3 style="font-family: var(--font-heading); font-size: 21px; margin: 0 0 var(--space-3); line-height: 1.25;">Encode expert knowledge into safety</h3>
+        <p style="font-family: var(--font-body); font-size: 16px; line-height: 1.6; margin: 0; opacity: 0.85;">Automatic guide-width calculation (+4.4 mm) and crash-guard validation. Machine-specific expert knowledge lives in the interface instead of requiring the user to know the rule.</p>
+      </div>
+      <div class="rulecol" style="border-left: 2px solid var(--color-divider); padding-left: var(--space-4);">
+        <div style="font-family: var(--font-body); font-size: 13px; letter-spacing: 0.1em; color: var(--color-accent-700); margin-bottom: var(--space-3);">05</div>
+        <h3 style="font-family: var(--font-heading); font-size: 21px; margin: 0 0 var(--space-3); line-height: 1.25;">User-defined cameras</h3>
+        <p style="font-family: var(--font-body); font-size: 16px; line-height: 1.6; margin: 0; opacity: 0.85;">Not every part needs all three views. Users define the cameras required for each part rather than being pushed through unnecessary configuration steps.</p>
+      </div>
+      <div class="rulecol" style="border-left: 2px solid var(--color-divider); padding-left: var(--space-4);">
+        <div style="font-family: var(--font-body); font-size: 13px; letter-spacing: 0.1em; color: var(--color-accent-700); margin-bottom: var(--space-3);">06</div>
+        <h3 style="font-family: var(--font-heading); font-size: 21px; margin: 0 0 var(--space-3); line-height: 1.25;">Compact right-side panel</h3>
+        <p style="font-family: var(--font-body); font-size: 16px; line-height: 1.6; margin: 0; opacity: 0.85;">A dense, no-scroll configuration panel keeps the workstation compact and gives more space to the live camera viewport.</p>
+      </div>
+      <div class="rulecol" style="border-left: 2px solid var(--color-divider); padding-left: var(--space-4);">
+        <div style="font-family: var(--font-body); font-size: 13px; letter-spacing: 0.1em; color: var(--color-accent-700); margin-bottom: var(--space-3);">07</div>
+        <h3 style="font-family: var(--font-heading); font-size: 21px; margin: 0 0 var(--space-3); line-height: 1.25;">Touch-first interaction</h3>
+        <p style="font-family: var(--font-body); font-size: 16px; line-height: 1.6; margin: 0; opacity: 0.85;">Designed for an industrial capacitive touchscreen: 44–64 px touch targets, no hover-dependent interactions.</p>
+      </div>
+      <div class="rulecol" style="border-left: 2px solid var(--color-divider); padding-left: var(--space-4);">
+        <div style="font-family: var(--font-body); font-size: 13px; letter-spacing: 0.1em; color: var(--color-accent-700); margin-bottom: var(--space-3);">08</div>
+        <h3 style="font-family: var(--font-heading); font-size: 21px; margin: 0 0 var(--space-3); line-height: 1.25;">Status communication</h3>
+        <p style="font-family: var(--font-body); font-size: 16px; line-height: 1.6; margin: 0; opacity: 0.85;">Color together with iconography and text. Green, red, and amber are reserved for status and safety states — readable under variable lighting, never color alone.</p>
+      </div>
+      <div class="rulecol" style="border-left: 2px solid var(--color-divider); padding-left: var(--space-4);">
+        <div style="font-family: var(--font-body); font-size: 13px; letter-spacing: 0.1em; color: var(--color-accent-700); margin-bottom: var(--space-3);">09</div>
+        <h3 style="font-family: var(--font-heading); font-size: 21px; margin: 0 0 var(--space-3); line-height: 1.25;">Light and dark themes</h3>
+        <p style="font-family: var(--font-body); font-size: 16px; line-height: 1.6; margin: 0; opacity: 0.85;">Shared design tokens drive both themes, for bright production floors and dim QA environments alike.</p>
+      </div>
+      <div class="rulecol" style="border-left: 2px solid var(--color-divider); padding-left: var(--space-4);">
+        <div style="font-family: var(--font-body); font-size: 13px; letter-spacing: 0.1em; color: var(--color-accent-700); margin-bottom: var(--space-3);">10</div>
+        <h3 style="font-family: var(--font-heading); font-size: 21px; margin: 0 0 var(--space-3); line-height: 1.25;">Typography</h3>
+        <p style="font-family: var(--font-body); font-size: 16px; line-height: 1.6; margin: 0; opacity: 0.85;">Sentence-case typography and tabular figures — for readability, localization headroom, and aligned measurement values.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="hr" style="max-width: 1160px; margin: 0 auto;"></div>
+
+  <section id="final" style="max-width: 1160px; margin: 0 auto; padding: var(--space-8) var(--space-4) var(--space-6);">
+    <div style="display: flex; align-items: baseline; gap: var(--space-4);">
+      <h2 style="font-family: var(--font-heading); font-size: clamp(26px, 3vw, 36px); margin: 0;">The final design</h2>
+    </div>
+    <p style="font-family: var(--font-body); font-size: 17px; line-height: 1.6; max-width: 58ch; margin: var(--space-4) 0 0; opacity: 0.85;">Organised by workflow — from finding a program, through mechanical setup and optical setup, to measurement configuration.</p>
+  </section>
+
+  <section style="max-width: 1160px; margin: 0 auto; padding: 0 var(--space-4) var(--space-8);">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; border-top: 2px solid var(--color-divider); padding-top: var(--space-3); margin-bottom: var(--space-4);">
+      <h3 style="font-family: var(--font-heading); font-size: clamp(22px, 2.4vw, 28px); margin: 0;">Program Explorer</h3>
+      <span style="font-family: var(--font-body); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-700);">Section 1</span>
+    </div>
+    <div class="frame" style="border: 2px solid var(--color-divider); background: var(--color-surface); padding: var(--space-3); margin-bottom: var(--space-4);">
+      <img src="assets/program-explorer.svg" alt="Program Explorer — program search, cards, part detection, live preview" loading="lazy" decoding="async" style="width: 100%; height: auto; object-fit: contain; display: block;">
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+      <span class="tag tag-outline">Program search</span>
+      <span class="tag tag-outline">Program cards</span>
+      <span class="tag tag-outline">Part detection</span>
+      <span class="tag tag-outline">Live preview</span>
+      <span class="tag tag-outline">Program actions</span>
+      <span class="tag tag-outline">Inspection launch</span>
+    </div>
+  </section>
+
+  <section style="max-width: 1160px; margin: 0 auto; padding: 0 var(--space-4) var(--space-8);">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; border-top: 2px solid var(--color-divider); padding-top: var(--space-3); margin-bottom: var(--space-4);">
+      <h3 style="font-family: var(--font-heading); font-size: clamp(22px, 2.4vw, 28px); margin: 0;">Part Setup</h3>
+      <span style="font-family: var(--font-body); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-700);">Section 2</span>
+    </div>
+    <div class="frame" style="border: 2px solid var(--color-divider); background: var(--color-surface); padding: var(--space-3); margin-bottom: var(--space-4);">
+      <img src="assets/part-setup.svg" alt="Part Setup — guide, arrestor, reeler, trigger and trial run" loading="lazy" decoding="async" style="width: 100%; height: auto; object-fit: contain; display: block;">
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+      <span class="tag tag-outline">Guide position</span>
+      <span class="tag tag-outline">Guide width</span>
+      <span class="tag tag-outline">Arrestor settings</span>
+      <span class="tag tag-outline">Reeler motor</span>
+      <span class="tag tag-outline">Motion controls</span>
+      <span class="tag tag-outline">Stamping speed</span>
+      <span class="tag tag-outline">Trigger setup</span>
+      <span class="tag tag-outline">Trial run</span>
+      <span class="tag tag-outline">Save and proceed</span>
+    </div>
+  </section>
+
+  <section style="max-width: 1160px; margin: 0 auto; padding: 0 var(--space-4) var(--space-8);">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; border-top: 2px solid var(--color-divider); padding-top: var(--space-3); margin-bottom: var(--space-4);">
+      <h3 style="font-family: var(--font-heading); font-size: clamp(22px, 2.4vw, 28px); margin: 0;">View Setup</h3>
+      <span style="font-family: var(--font-body); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-700);">Section 3</span>
+    </div>
+    <div class="frame" style="border: 2px solid var(--color-divider); background: var(--color-surface); padding: var(--space-3); margin-bottom: var(--space-4);">
+      <img src="assets/view-setup.svg" alt="View Setup — AOI, lighting, focus, exposure and capture" loading="lazy" decoding="async" style="width: 100%; height: auto; object-fit: contain; display: block;">
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+      <span class="tag tag-outline">View selection</span>
+      <span class="tag tag-outline">AOI setup</span>
+      <span class="tag tag-outline">Lighting controls</span>
+      <span class="tag tag-outline">Focus control</span>
+      <span class="tag tag-outline">Exposure</span>
+      <span class="tag tag-outline">Lens position</span>
+      <span class="tag tag-outline">Capture</span>
+      <span class="tag tag-outline">Image quality</span>
+    </div>
+  </section>
+
+  <section style="max-width: 1160px; margin: 0 auto; padding: 0 var(--space-4) var(--space-8);">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; border-top: 2px solid var(--color-divider); padding-top: var(--space-3); margin-bottom: var(--space-4);">
+      <h3 style="font-family: var(--font-heading); font-size: clamp(22px, 2.4vw, 28px); margin: 0;">Tool Kit — measurement configuration</h3>
+      <span style="font-family: var(--font-body); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-700);">Section 4</span>
+    </div>
+    <div class="frame" style="border: 2px solid var(--color-divider); background: var(--color-surface); padding: var(--space-3); margin-bottom: var(--space-4);">
+      <img src="assets/tool-kit.svg" alt="Tool Kit — macros, detection tools and measurement tools" loading="lazy" decoding="async" style="width: 100%; height: auto; object-fit: contain; display: block;">
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+      <span class="tag tag-outline">Macros</span>
+      <span class="tag tag-outline">Detection tools</span>
+      <span class="tag tag-outline">Measurement tools</span>
+      <span class="tag tag-outline">Tool grouping</span>
+      <span class="tag tag-outline">Categorised inspection operations</span>
+    </div>
+  </section>
+
+  <div class="hr" style="max-width: 1160px; margin: 0 auto;"></div>
+
+  <section id="prototype" style="max-width: 1160px; margin: 0 auto; padding: var(--space-8) var(--space-4);">
+    <div style="display: flex; align-items: baseline; gap: var(--space-4); margin-bottom: var(--space-4);">
+      <h2 style="font-family: var(--font-heading); font-size: clamp(26px, 3vw, 36px); margin: 0;">Interactive prototype</h2>
+    </div>
+    <p style="font-family: var(--font-body); font-size: 18px; line-height: 1.6; max-width: 58ch; margin: 0 0 var(--space-6);">The high-fidelity prototype demonstrates the proposed configuration workflow and interaction model before implementation.</p>
+    <div style="border: 2px solid var(--color-divider); background: var(--color-surface); padding: var(--space-3);">
+      <video ref="{{ videoRef }}" preload="metadata" playsinline="" onClick="{{ togglePlay }}" style="width: 100%; height: auto; display: block; background: #000; cursor: pointer;"></video>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); margin-top: var(--space-3); font-family: var(--font-body);">
+        <button onClick="{{ skipBack }}" style="border: 2px solid var(--color-divider); background: none; color: var(--color-text); padding: 0 16px; height: 44px; font-family: var(--font-body); font-size: 14px; cursor: pointer; display: inline-flex; align-items: center;">« 10s</button>
+        <button onClick="{{ togglePlay }}" style="border: 2px solid var(--color-divider); background: none; color: var(--color-text); padding: 0 18px; height: 44px; font-family: var(--font-body); font-size: 14px; cursor: pointer; min-width: 84px; display: inline-flex; align-items: center; justify-content: center;">{{ playLabel }}</button>
+        <button onClick="{{ skipFwd }}" style="border: 2px solid var(--color-divider); background: none; color: var(--color-text); padding: 0 16px; height: 44px; font-family: var(--font-body); font-size: 14px; cursor: pointer; display: inline-flex; align-items: center;">10s »</button>
+        <input type="range" min="0" max="{{ duration }}" step="0.1" value="{{ currentTime }}" onInput="{{ seek }}" onMouseDown="{{ seekStart }}" onTouchStart="{{ seekStart }}" onMouseUp="{{ seekEnd }}" onTouchEnd="{{ seekEnd }}" style="flex: 1 1 160px; accent-color: var(--color-accent);">
+        <span style="font-size: 13px; opacity: 0.6; min-width: 90px; text-align: right;">{{ timeLabel }}</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="hr" style="max-width: 1160px; margin: 0 auto;"></div>
+
+  <section class="split" style="max-width: 1160px; margin: 0 auto; padding: var(--space-8) var(--space-4); display: grid; grid-template-columns: minmax(200px, 1fr) minmax(0, 2.2fr); gap: var(--space-8);">
+    <div class="sticky" style="position: sticky; top: 80px; align-self: start; display: flex; align-items: baseline; gap: var(--space-4);">
+      <h2 style="font-family: var(--font-heading); font-size: clamp(26px, 3vw, 36px); margin: 0;">Where it stands</h2>
+    </div>
+    <div>
+      <p style="font-family: var(--font-body); font-size: 18px; line-height: 1.65; max-width: 62ch; margin: 0 0 var(--space-6);">The design is currently a high-fidelity interactive prototype, ready for implementation in Phoenix LiveView / HEEx. It is not yet in production. What the project established:</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0 var(--space-6);">
+        <div style="font-family: var(--font-body); font-size: 16px; padding: var(--space-3) 0; border-top: 1px solid var(--color-divider);">A self-service configuration model</div>
+        <div style="font-family: var(--font-body); font-size: 16px; padding: var(--space-3) 0; border-top: 1px solid var(--color-divider);">A structured configuration workflow</div>
+        <div style="font-family: var(--font-body); font-size: 16px; padding: var(--space-3) 0; border-top: 1px solid var(--color-divider);">Reusable UI / component foundations</div>
+        <div style="font-family: var(--font-body); font-size: 16px; padding: var(--space-3) 0; border-top: 1px solid var(--color-divider);">Validation and safety interaction patterns</div>
+        <div style="font-family: var(--font-body); font-size: 16px; padding: var(--space-3) 0; border-top: 1px solid var(--color-divider);">Touch interaction guidelines</div>
+        <div style="font-family: var(--font-body); font-size: 16px; padding: var(--space-3) 0; border-top: 1px solid var(--color-divider);">Design-system foundations</div>
+        <div style="font-family: var(--font-body); font-size: 16px; padding: var(--space-3) 0; border-top: 1px solid var(--color-divider); border-bottom: 1px solid var(--color-divider);">An implementation-ready interaction model</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="hr" style="max-width: 1160px; margin: 0 auto;"></div>
+
+  <section style="max-width: 1160px; margin: 0 auto; padding: var(--space-8) var(--space-4);">
+    <div style="display: flex; align-items: baseline; gap: var(--space-4); margin-bottom: var(--space-6);">
+      <h2 style="font-family: var(--font-heading); font-size: clamp(26px, 3vw, 36px); margin: 0;">What I took from it</h2>
+    </div>
+    <div class="cols3" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-6);">
+      <div class="rulecol" style="border-left: 2px solid var(--color-divider); padding-left: var(--space-4);">
+        <p style="font-family: var(--font-body); font-size: 17px; line-height: 1.6; margin: 0;">Designing industrial interfaces requires understanding the physical machine and the software together.</p>
+      </div>
+      <div class="rulecol" style="border-left: 2px solid var(--color-divider); padding-left: var(--space-4);">
+        <p style="font-family: var(--font-body); font-size: 17px; line-height: 1.6; margin: 0;">My Field Application Engineer experience helped me understand both customer/operator needs and application-engineer constraints.</p>
+      </div>
+      <div class="rulecol" style="border-left: 2px solid var(--color-divider); padding-left: var(--space-4);">
+        <p style="font-family: var(--font-body); font-size: 17px; line-height: 1.6; margin: 0;">Complex expert knowledge can be translated into guided UI controls, defaults, and validation.</p>
+      </div>
+      <div class="rulecol" style="border-left: 2px solid var(--color-divider); padding-left: var(--space-4);">
+        <p style="font-family: var(--font-body); font-size: 17px; line-height: 1.6; margin: 0;">Industrial touchscreen interfaces need different interaction considerations from conventional web applications.</p>
+      </div>
+      <div class="rulecol" style="border-left: 2px solid var(--color-divider); padding-left: var(--space-4);">
+        <p style="font-family: var(--font-body); font-size: 17px; line-height: 1.6; margin: 0;">Design and implementation need to be considered together when preparing an interface for real engineering teams.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="hr" style="max-width: 1160px; margin: 0 auto;"></div>
+
+  <section class="split" style="max-width: 1160px; margin: 0 auto; padding: var(--space-8) var(--space-4); display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); align-items: end;">
+    <h2 style="font-family: var(--font-heading); font-size: clamp(28px, 3.6vw, 44px); margin: 0; max-width: 18ch; line-height: 1.1;">Let's build something useful.</h2>
+    <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+      <a href="mailto:aravindkumarak1302@gmail.com" class="btn btn-primary">Email me</a>
+      <a href="#" onClick="{{ goHome }}" class="btn btn-secondary">Back to portfolio</a>
+    </div>
+  </section>
+
+  <footer style="max-width: 1160px; margin: 0 auto; padding: var(--space-4); display: flex; justify-content: space-between; flex-wrap: wrap; gap: var(--space-2); font-family: var(--font-body); font-size: 13px; opacity: 0.55; border-top: 2px solid var(--color-divider);">
+    <span>Aravind Kumar S — UI/UX Designer</span>
+    <span>© 2026</span>
+  </footer>
+
+</div>
+</sc-if>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;prototypeButtonLabel&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Prototype&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Nav&quot;},&quot;prototypeButtonHref&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;#prototype&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Nav&quot;}}">
+class Component extends DCLogic {
+  state = {
+    view: (typeof location !== 'undefined' && location.hash === '#case-study') ? 'case' : 'home',
+    playing: false,
+    currentTime: 0,
+    duration: 0,
+  };
+  videoRef = React.createRef();
+
+  componentDidMount() {
+    window.addEventListener('popstate', this.onPopState);
+    this.attachVideo();
+  }
+
+  componentDidUpdate() {
+    this.attachVideo();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('popstate', this.onPopState);
+  }
+
+  attachVideo = () => {
+    const v = this.videoRef.current;
+    if (!v) return;
+    if (!v.src) {
+      v.src = (typeof window !== 'undefined' && window.__resources && window.__resources['proto-video-src']) || 'assets/prototype-video.mp4';
+    }
+    if (v.__listenersAttached) return;
+    v.__listenersAttached = true;
+    const fixDuration = () => {
+      if (!isFinite(v.duration) || v.duration === 0) {
+        // some mp4 encodes report Infinity/0 duration until a seek forces the browser to read it
+        v.currentTime = 1e10;
+        v.addEventListener('seeked', () => {
+          this.setState({ duration: isFinite(v.duration) ? v.duration : 0 });
+          v.currentTime = 0;
+        }, { once: true });
+      } else {
+        this.setState({ duration: v.duration });
+      }
+    };
+    v.addEventListener('loadedmetadata', fixDuration);
+    v.addEventListener('durationchange', fixDuration);
+    v.addEventListener('timeupdate', () => { if (!this.state.seeking) this.setState({ currentTime: v.currentTime }); });
+    v.addEventListener('play', () => this.setState({ playing: true }));
+    v.addEventListener('pause', () => this.setState({ playing: false }));
+    if (v.readyState >= 1) fixDuration();
+  };
+
+  onPopState = (e) => {
+    // only react to our own pushState entries; ignore in-page anchor jumps (#prototype, #context, #final, etc.)
+    if (!e || !e.state || !e.state.view) return;
+    this.setState({ view: e.state.view });
+    window.scrollTo(0, 0);
+  };
+
+  goCaseStudy = (e) => {
+    if (e) e.preventDefault();
+    this.setState({ view: 'case' });
+    window.scrollTo(0, 0);
+    history.pushState({ view: 'case' }, '', '#case-study');
+  };
+
+  goHome = (e) => {
+    if (e) e.preventDefault();
+    this.setState({ view: 'home' });
+    window.scrollTo(0, 0);
+    history.pushState({ view: 'home' }, '', '#home');
+  };
+
+  togglePlay = () => {
+    const v = this.videoRef.current;
+    if (!v) return;
+    if (v.paused) v.play(); else v.pause();
+  };
+
+  skipBack = () => {
+    const v = this.videoRef.current;
+    if (!v) return;
+    v.currentTime = Math.max(0, v.currentTime - 10);
+  };
+
+  skipFwd = () => {
+    const v = this.videoRef.current;
+    if (!v) return;
+    v.currentTime = Math.min(v.duration || v.currentTime + 10, v.currentTime + 10);
+  };
+
+  seekStart = () => this.setState({ seeking: true });
+
+  seekEnd = () => this.setState({ seeking: false });
+
+  seek = (e) => {
+    const v = this.videoRef.current;
+    if (!v) return;
+    const t = parseFloat(e.target.value);
+    v.currentTime = t;
+    this.setState({ currentTime: t, seeking: true });
+  };
+
+  formatTime(t) {
+    if (!isFinite(t) || t < 0) t = 0;
+    const m = Math.floor(t / 60);
+    const s = Math.floor(t % 60);
+    return m + ':' + (s < 10 ? '0' : '') + s;
+  }
+
+  renderVals() {
+    return {
+      isHome: this.state.view === 'home',
+      isCase: this.state.view === 'case',
+      goHome: this.goHome,
+      goCaseStudy: this.goCaseStudy,
+      prototypeButtonLabel: this.props.prototypeButtonLabel ?? 'Prototype',
+      prototypeButtonHref: this.props.prototypeButtonHref ?? '#prototype',
+      videoRef: this.videoRef,
+      togglePlay: this.togglePlay,
+      skipBack: this.skipBack,
+      skipFwd: this.skipFwd,
+      seek: this.seek,
+      playLabel: this.state.playing ? 'Pause' : 'Play',
+      duration: Number((this.state.duration || 0).toFixed(1)),
+      currentTime: Number((this.state.currentTime || 0).toFixed(1)),
+      timeLabel: this.formatTime(this.state.currentTime) + ' / ' + this.formatTime(this.state.duration),
+    };
+  }
+}
+
+</script>
+</body>
+</html>

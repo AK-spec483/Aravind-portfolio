@@ -1,0 +1,7 @@
+_ds/
+.image-slots.state.json
+.thumbnail
+*.backup
+uploads/
+Resume.dc.html
+design_handoff_portfolio/
